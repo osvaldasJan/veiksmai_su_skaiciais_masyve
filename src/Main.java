@@ -17,7 +17,7 @@ public class Main {
         //1. Sukurti 10 + ir - skaičių masyvą.
         double[] skaiciuMasyvas = {-1, -2, -3, -4, -5, 6, 7, 8, 9, 10};
         System.out.println("Masyvas: ");
-        atspausdintiMasyvoElementus (skaiciuMasyvas);
+        spausdintiMasyvoElementus (skaiciuMasyvas);
         //2. Sukurti funkciją, skaičiuojančią lyginių masyvo elementų vidurkį (sumai ir kiekiui atskiros funkcijos (!)). pagal lygini skaiciu.
         //System.out.printf("%n"+"Lyginiu masyvo nariu kiekis: " + skaiciuotiLyginiuMasyvoNariuKieki(skaiciuMasyvas));
         //System.out.printf("%n"+"Lyginiu masyvo nariu suma: " + skaiciuotiLyginiuMasyvoNariuSuma(skaiciuMasyvas));
@@ -43,13 +43,7 @@ public class Main {
         return skaiciuotiMasyvoNariuSuma(x) / x.length;
     }
 
-    public static double lyginiaiSkaiciaiMasyve(double[] x) {
-        for (int i = 0; i < x.length; i = i + 2) {
-        }
-        return skaiciuotiMasyvoNariuSuma(x) / x.length;
-    }
-
-    public static double max(double[] x) {
+    public static double rastiMaxSkaiciuMasyve(double[] x) {
         int i, max = -999999999;
         for (i = 0; i < x.length; i++) {
             if (x[i] > max) {
@@ -71,7 +65,7 @@ public class Main {
         return indeksas;
     }
 
-    public static double min(double[] x) {
+    public static double rastiMinSkaiciuMasyve(double[] x) {
         int i, min = 999999999;
         for (i = 0; i < x.length; i++) {
             if (x[i] < min) {
@@ -81,7 +75,7 @@ public class Main {
         return min;
     }
 
-    public static int minSkaiciausIndeksas(double[] x) {
+    public static int rastiMinSkaiciausIndeksaMasyve(double[] x) {
         int i, min = 999999999;
         int indeksas = 0;
         for (i = 0; i < x.length; i++) {
@@ -108,7 +102,7 @@ public class Main {
         return y;
     }
 
-    public static void atspausdintiMasyvoElementus(double[] x) {
+    public static void spausdintiMasyvoElementus(double[] x) {
         for (int i = 0; i < x.length; i++) {
             if (i == 0) {
                 System.out.print("[" + x[i] + ", ");
@@ -119,14 +113,14 @@ public class Main {
             }
         }
     }
-
+    
     public static void spausdintiMasyvaPriesIrPo(double[] x) {
         //masyvas pries pasikeitimus
         System.out.println("Masyvas pries nariu sukeitima vietomis: ");
-        atspausdintiMasyvoElementus(x);
+        spausdintiMasyvoElementus(x);
         //masyvas po didziausios ir maziausios reiksmes sukeitimo vietomis
         System.out.printf("%n" + "Masyvas po didziausios ir maziausios masyvo reiksmiu sukeitimo vietomis: " + "%n");
-        atspausdintiMasyvoElementus(sukeistiMasyvoElementusVietomis(x, maxSkaiciausIndeksas(x), minSkaiciausIndeksas(x)));
+        spausdintiMasyvoElementus(sukeistiMasyvoElementusVietomis(x, maxSkaiciausIndeksas(x), rastiMinSkaiciausIndeksaMasyve(x)));
     }
 
     public static double skaiciuotiLyginiuMasyvoNariuSuma(double[] x) {
