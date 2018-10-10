@@ -21,7 +21,7 @@ public class Main {
         //2. Sukurti funkciją, skaičiuojančią lyginių masyvo elementų vidurkį (sumai ir kiekiui atskiros funkcijos (!)). pagal lygini skaiciu.
         //System.out.printf("%n"+"Lyginiu masyvo nariu kiekis: " + skaiciuotiLyginiuMasyvoNariuKieki(skaiciuMasyvas));
         //System.out.printf("%n"+"Lyginiu masyvo nariu suma: " + skaiciuotiLyginiuMasyvoNariuSuma(skaiciuMasyvas));
-        System.out.printf("%n"+"Lyginiu masyvo nariu vidurkis: " + skaiciuotiLyginiuMasyvoNariuVidurki(skaiciuMasyvas) +"%n");
+        System.out.printf("%n"+"Lyginiu masyvo elementu vidurkis: " + skaiciuotiLyginiuMasyvoNariuVidurki(skaiciuMasyvas) +"%n");
 
         //4. Sukurti funkciją, spausdinančią masyvą prieš pakeitimus ir po jų.
         spausdintiMasyvaPriesIrPo(skaiciuMasyvas);
